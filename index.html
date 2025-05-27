@@ -1,82 +1,183 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Euromed Innovation Center</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header, footer { background: #004080; color: white; padding: 20px; text-align: center; }
-    main { padding: 40px; max-width: 1000px; margin: auto; }
-    section { margin-bottom: 50px; }
-    h1, h2, h3 { color: #004080; }
-    ul { list-style: disc; margin-left: 20px; }
-    a { color: #004080; text-decoration: none; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fff;
+    }
+    header {
+      background: #004080;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header img {
+      max-height: 80px;
+      margin-bottom: 10px;
+    }
+    nav {
+      background: #003366;
+      text-align: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .stat {
+      flex: 1 1 200px;
+      background: #f1f6fc;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .stat h3 {
+      font-size: 2em;
+      color: #004080;
+      margin: 0;
+    }
+    .events {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .event img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .event h4 {
+      margin: 10px 0 5px;
+      font-size: 1.1em;
+      color: #004080;
+    }
+    .cta {
+      background: #f9f9f9;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .cta p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    .cta a {
+      background: #004080;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Euromed Innovation Center (EIC)</h1>
-  <p>Le catalyseur de l'innovation et de l'entrepreneuriat</p>
+  <img src="EIC LOGO Classique.png" alt="Logo EIC">
+  <h1>Euromed Innovation Center</h1>
+  <p>Catalyseur de l’innovation et de l’entrepreneuriat à l’UEMF</p>
 </header>
 
-<main>
-  <section id="accueil">
-    <h2>Bienvenue</h2>
-    <p>L'EIC accompagne les talents, les startups et les porteurs de projets pour transformer leurs idées en solutions concrètes et durables. Découvrez notre actualité, nos programmes phares et nos événements qui façonnent l’écosystème entrepreneurial de demain.</p>
-  </section>
+<nav>
+  <a href="#chiffres">L’EIC en chiffres</a>
+  <a href="#evenements">Événements</a>
+  <a href="#contact">Rejoignez-nous</a>
+</nav>
 
-  <section id="programmes">
-    <h2>Nos Programmes</h2>
+<section id="chiffres">
+  <h2>L’EIC en un coup d’œil</h2>
+  <div class="stats">
+    <div class="stat">
+      <h3>+60</h3>
+      <p>Startups accompagnées</p>
+    </div>
+    <div class="stat">
+      <h3>+15</h3>
+      <p>Partenaires stratégiques</p>
+    </div>
+    <div class="stat">
+      <h3>4</h3>
+      <p>Programmes d’accompagnement</p>
+    </div>
+    <div class="stat">
+      <h3>AgriTech, IA...</h3>
+      <p>Domaines d’impact</p>
+    </div>
+  </div>
+</section>
 
-```
-<h3>🌟 STARTECH - Programme d'idéation</h3>
-<p>Les 18 & 19 avril, le bootcamp STRATECH a réuni la cohorte 2025 autour de moments clés : compréhension du marché, validation des business models, sessions de pitch à impact. En partenariat avec Tamwilcom, cet événement marque une étape essentielle dans le parcours des futurs entrepreneurs.</p>
-<ul>
-  <li>Comprendre son marché</li>
-  <li>Valider son business model</li>
-  <li>Coaching personnalisé</li>
-  <li>Élaboration de pitchs percutants</li>
-</ul>
+<section id="evenements">
+  <h2>Nos événements marquants</h2>
+  <div class="events">
+    <div class="event">
+      <img src="https://via.placeholder.com/400x200?text=Bootcamp+Startech" alt="Bootcamp Startech">
+      <h4>Bootcamp STARTECH (avril 2025)</h4>
+      <p>Marché, modèle, pitch à impact et coaching personnalisé</p>
+    </div>
+    <div class="event">
+      <img src="https://via.placeholder.com/400x200?text=Tech4Farmers" alt="Tech4Farmers">
+      <h4>Tech4Farmers (mai 2025)</h4>
+      <p>Incubation AgriTech intensive et Demo Day</p>
+    </div>
+    <div class="event">
+      <img src="https://via.placeholder.com/400x200?text=AInnovathon" alt="AInnovathon">
+      <h4>AInnovathon</h4>
+      <p>Solutions IA pour la santé et l’éducation</p>
+    </div>
+    <div class="event">
+      <img src="https://via.placeholder.com/400x200?text=Hackathon+Eau" alt="Hackathon Eau">
+      <h4>Hackathon Méditerranéen Eau</h4>
+      <p>Jeunes innovateurs de toute la Méditerranée</p>
+    </div>
+  </div>
+</section>
 
-<h3>🌿 Tech4Farmers - Innovation pour l'agriculture durable</h3>
-<p>Du 13 au 15 mai 2025, notre deuxième bootcamp Tech4Farmers a permis à nos startups incubées de consolider leurs solutions AgriTech. Trois jours mêlant ateliers, masterclasses et réseautage stratégique, soutenus par l’AFD et le PRIE.</p>
-<p>Le 15 mai, le Demo Day a clôturé l’année d’incubation de la première cohorte avec 15 startups présentant leurs prototypes : irrigation optimisée, robotique, IA, valorisation des biodéchets...</p>
-
-<h3>💡 AInnovathon - Hackathon étudiant IA & Impact</h3>
-<p>Les 22 & 23 avril, plus de 50 étudiants ont participé à l’AInnovathon pour créer des solutions dans les domaines de la santé et de l’éducation. Trois projets sélectionnés : <strong>Ru’ya</strong>, <strong>MedPass</strong>, <strong>Eschool4GenZ</strong>.</p>
-```
-
-  </section>
-
-  <section id="actualites">
-    <h2>Actualités & Événements</h2>
-
-```
-<h3>Kawaliss - Entrepreneuriat culturel</h3>
-<p>Session d'information ouverte sur le programme Kawaliss, dédié aux entrepreneurs culturels. Une opportunité pour découvrir les perspectives offertes par ce dispositif.</p>
-
-<h3>Mediterranean Youth Water Hackathon</h3>
-<p>30 jeunes innovateurs venus de toute la Méditerranée se sont réunis à Fès pour relever les défis liés à l’eau. Un hackathon organisé avec CEWAS et l’UfM, entre créativité, startups et interculturalité.</p>
-```
-
-  </section>
-
-  <section id="contact">
-    <h2>Rejoignez notre écosystème</h2>
-    <p>Vous avez une idée, un projet ou simplement l’envie de faire partie d’une communauté dynamique et innovante ? Contactez-nous :</p>
-    <ul>
-      <li>📍 Euromed University of Fes</li>
-      <li>📧 <a href="mailto:eic@ueuromed.org">eic@ueuromed.org</a></li>
-      <li>🔗 Instagram & Facebook : <a href="https://www.instagram.com/euromed_innovation_center" target="_blank">@euromed_innovation_center</a></li>
-    </ul>
-  </section>
-</main>
+<section id="contact">
+  <h2>Rejoignez notre écosystème</h2>
+  <div class="cta">
+    <p>Prêts à innover et à entreprendre avec nous ?<br>Rejoignez notre écosystème dynamique pour transformer vos idées en réalité.</p>
+    <a href="mailto:eic@ueuromed.org">Nous contacter</a>
+  </div>
+</section>
 
 <footer>
-  <p>© 2025 Euromed Innovation Center - Tous droits réservés</p>
+  <p>© 2025 Euromed Innovation Center – Tous droits réservés</p>
 </footer>
 
 </body>
