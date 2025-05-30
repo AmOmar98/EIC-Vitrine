@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -14,10 +13,22 @@
       background: #fff;
     }
     header {
-      background: #004080;
+      background: url('header-background.jpg') no-repeat center center/cover;
       color: white;
-      padding: 30px 20px;
+      padding: 80px 20px 60px;
       text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 64, 128, 0.6);
+      z-index: 1;
+    }
+    header * {
+      position: relative;
+      z-index: 2;
     }
     header img {
       max-height: 80px;
