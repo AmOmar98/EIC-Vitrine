@@ -3,152 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Centre d'innovation et d'entrepreneuriat de l'UEMF">
+  <meta name="keywords" content="innovation, entrepreneuriat, incubation, startups">
+  <meta property="og:title" content="Euromed Innovation Center">
   <title>Euromed Innovation Center</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #fff;
-    }
-    header {
-      background: url('header-background.jpg') no-repeat center center/cover;
-      color: white;
-      padding: 80px 20px 60px;
-      text-align: center;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 64, 128, 0.6);
-      z-index: 1;
-    }
-    header * {
-      position: relative;
-      z-index: 2;
-    }
-    header img {
-      max-height: 80px;
-      margin-bottom: 10px;
-    }
-    nav {
-      background: #003366;
-      text-align: center;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffcc00;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      color: #004080;
-      margin-bottom: 30px;
-      text-align: center;
-      font-size: 2em;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-    .stat-block {
-      background: #f1f6fc;
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    .stat-block:hover {
-      transform: scale(1.03);
-    }
-    .stat-block h3 {
-      font-size: 2.5em;
-      color: #004080;
-      margin-bottom: 10px;
-    }
-    .events {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-    .event img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .event h4 {
-      margin: 15px 0 10px;
-      font-size: 1.2em;
-      color: #004080;
-    }
-    .event p {
-      font-size: 0.95em;
-    }
-    .cta {
-      background: #e6f0ff;
-      padding: 50px 30px;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .cta p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-    .cta a {
-      background: #004080;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .cta a:hover {
-      background: #003060;
-    }
-    footer {
-      background: #003366;
-      color: white;
-      padding: 25px 20px;
-      text-align: center;
-      font-size: 0.95em;
-    }
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .event img {
-        height: 160px;
-      }
-    }
-  </style>
-</head>
-<body>
-  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -159,6 +18,7 @@
 </header>
 
 <nav>
+  <a href="index_en.html" style="float:right">English</a>
   <a href="#chiffres">L’EIC en chiffres</a>
   <a href="#evenements">Événements</a>
   <a href="#contact">Rejoignez-nous</a>
@@ -358,16 +218,27 @@
 
 
 <section id="contact">
-  <h2>Rejoignez notre écosystème</h2>
+  <h2>Rejoignez notre écosysteme</h2>
   <div class="cta">
-    <p>Prêts à innover et à entreprendre avec nous ?<br>Rejoignez notre écosystème dynamique pour transformer vos idées en réalité.</p>
-    <a href="mailto:eic@ueuromed.org">Nous contacter</a>
+    <p>Prêts à innover et à entreprendre avec nous ?<br>Rejoignez notre écosysteme dynamique pour transformer vos idées en réalité.</p>
+    <form action="mailto:eic@ueuromed.org" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Nom" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <textarea name="message" placeholder="Votre message" required></textarea><br>
+      <button type="submit">Envoyer</button>
+    </form>
   </div>
 </section>
 
 <footer>
   <p>© 2025 Euromed Innovation Center – Tous droits réservés</p>
 </footer>
+<div class="back-to-top">↑ Haut de page</div>
 
+<script>
+const topBtn=document.querySelector(".back-to-top");
+window.addEventListener("scroll",()=>{topBtn.style.display=window.scrollY>300?"block":"none";});
+topBtn.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+</script>
 </body>
 </html>
