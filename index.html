@@ -3,371 +3,295 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Centre d'innovation et d'entrepreneuriat de l'UEMF">
+  <meta name="keywords" content="innovation, entrepreneuriat, incubation, startups">
+  <meta property="og:title" content="Euromed Innovation Center">
   <title>Euromed Innovation Center</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #fff;
-    }
-    header {
-      background: url('header-background.jpg') no-repeat center center/cover;
-      color: white;
-      padding: 80px 20px 60px;
-      text-align: center;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 64, 128, 0.6);
-      z-index: 1;
-    }
-    header * {
-      position: relative;
-      z-index: 2;
-    }
-    header img {
-      max-height: 80px;
-      margin-bottom: 10px;
-    }
-    nav {
-      background: #003366;
-      text-align: center;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffcc00;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      color: #004080;
-      margin-bottom: 30px;
-      text-align: center;
-      font-size: 2em;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-    .stat-block {
-      background: #f1f6fc;
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    .stat-block:hover {
-      transform: scale(1.03);
-    }
-    .stat-block h3 {
-      font-size: 2.5em;
-      color: #004080;
-      margin-bottom: 10px;
-    }
-    .events {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-    .event img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .event h4 {
-      margin: 15px 0 10px;
-      font-size: 1.2em;
-      color: #004080;
-    }
-    .event p {
-      font-size: 0.95em;
-    }
-    .cta {
-      background: #e6f0ff;
-      padding: 50px 30px;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .cta p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-    .cta a {
-      background: #004080;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .cta a:hover {
-      background: #003060;
-    }
-    footer {
-      background: #003366;
-      color: white;
-      padding: 25px 20px;
-      text-align: center;
-      font-size: 0.95em;
-    }
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .event img {
-        height: 160px;
-      }
-    }
-  </style>
-</head>
-<body>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <img src="EIC LOGO Classique.png.png" alt="Logo EIC">
-  <h1>Euromed Innovation Center</h1>
-  <p>Catalyseur de l’innovation et de l’entrepreneuriat à l’UEMF</p>
+<header class="relative text-white text-center overflow-hidden py-20 px-4">
+  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+    <source src="header-video.mp4" type="video/mp4">
+  </video>
+  <div class="relative z-10 bg-gradient-to-r from-blue-800/90 to-blue-900/90 p-8">
+    <img class="mx-auto mb-4 max-h-20" src="EIC LOGO Classique.png.png" alt="Logo EIC">
+    <h1 class="text-4xl font-semibold mb-2">Euromed Innovation Center</h1>
+    <p class="text-xl">Catalyseur de l’innovation et de l’entrepreneuriat à l’UEMF</p>
+  </div>
 </header>
 
-<nav>
-  <a href="#chiffres">L’EIC en chiffres</a>
-  <a href="#evenements">Événements</a>
-  <a href="#contact">Rejoignez-nous</a>
+<nav aria-label="Navigation principale" class="bg-blue-900 text-white sticky top-0 z-10">
+  <ul class="max-w-7xl mx-auto flex flex-wrap justify-center p-4 space-x-6">
+    <li class="ml-auto"><a href="index_en.html" class="hover:text-yellow-300">English</a></li>
+    <li><a href="#chiffres" class="hover:text-yellow-300">L’EIC en chiffres</a></li>
+    <li><a href="#evenements" class="hover:text-yellow-300">Événements</a></li>
+    <li><a href="#contact" class="hover:text-yellow-300">Rejoignez-nous</a></li>
+  </ul>
 </nav>
 
-<section id="chiffres">
-  <h2>L’EIC en un coup d’œil</h2>
-  <div class="stats-grid">
+<section id="chiffres" class="py-16 px-4">
+  <h2 class="text-3xl font-semibold text-center mb-10">L’EIC en un coup d’œil</h2>
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-    <div class="stat-block">
-      <h3>143</h3>
+    <div class="bg-gray-100 p-6 rounded-lg text-center shadow hover:scale-105 transition-transform">
+      <h3 class="text-4xl text-blue-900 font-bold mb-2">143</h3>
       <p>Projets accompagnés et mentorés</p>
     </div>
 
-    <div class="stat-block">
-      <h3>53%</h3>
+    <div class="bg-gray-100 p-6 rounded-lg text-center shadow hover:scale-105 transition-transform">
+      <h3 class="text-4xl text-blue-900 font-bold mb-2">53%</h3>
       <p>Femmes entrepreneures soutenues</p>
     </div>
 
-    <div class="stat-block">
-      <h3>+675</h3>
+    <div class="bg-gray-100 p-6 rounded-lg text-center shadow hover:scale-105 transition-transform">
+      <h3 class="text-4xl text-blue-900 font-bold mb-2">+675</h3>
       <p>Heures de formation délivrées</p>
     </div>
 
-    <div class="stat-block">
-      <h3>10</h3>
+    <div class="bg-gray-100 p-6 rounded-lg text-center shadow hover:scale-105 transition-transform">
+      <h3 class="text-4xl text-blue-900 font-bold mb-2">10</h3>
       <p>Programmes d’idéation & incubation déployés</p>
     </div>
 
-    <div class="stat-block">
-      <h3>13</h3>
+    <div class="bg-gray-100 p-6 rounded-lg text-center shadow hover:scale-105 transition-transform">
+      <h3 class="text-4xl text-blue-900 font-bold mb-2">13</h3>
       <p>Startups sélectionnées à GITEX Africa</p>
     </div>
 
-    <div class="stat-block">
-      <h3>27</h3>
+    <div class="bg-gray-100 p-6 rounded-lg text-center shadow hover:scale-105 transition-transform">
+      <h3 class="text-4xl text-blue-900 font-bold mb-2">27</h3>
       <p>Partenaires institutionnels & privés mobilisés</p>
     </div>
 
-    <div class="stat-block">
-      <h3>+632</h3>
+    <div class="bg-gray-100 p-6 rounded-lg text-center shadow hover:scale-105 transition-transform">
+      <h3 class="text-4xl text-blue-900 font-bold mb-2">+632</h3>
       <p>Personnes sensibilisées à l’entrepreneuriat</p>
     </div>
 
-    <div class="stat-block">
-      <h3>28</h3>
+    <div class="bg-gray-100 p-6 rounded-lg text-center shadow hover:scale-105 transition-transform">
+      <h3 class="text-4xl text-blue-900 font-bold mb-2">28</h3>
       <p>Startups incubées juridiquement établies</p>
     </div>
 
-    <div class="stat-block">
-      <h3>+546</h3>
+    <div class="bg-gray-100 p-6 rounded-lg text-center shadow hover:scale-105 transition-transform">
+      <h3 class="text-4xl text-blue-900 font-bold mb-2">+546</h3>
       <p>Personnes formées à l’entrepreneuriat</p>
     </div>
 
   </div>
 
-  <p style="text-align: center; margin-top: 30px; font-style: italic; color: #555;">
+  <p class="text-center mt-8 italic text-gray-600">
     Données cumulées depuis septembre 2024
   </p>
 </section>
 
-<section id="evenements">
-  <h2>Nos événements phares 2024–2025</h2>
-  <div class="events">
+<section id="evenements" class="py-16 px-4 bg-gray-50">
+  <h2 class="text-3xl font-semibold text-center mb-10">Nos événements phares 2024–2025</h2>
+  <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
 
-    <div class="event">
-      <img src="ainnovathon.jpg" alt="AInnovathon">
-      <h4>AInnovathon Bootcamp</h4>
-      <p><strong>Date :</strong> Avril 2025<br>
-         <strong>Partenaires :</strong> EBS, EIDIA<br>
-         <strong>Infos :</strong> +50 étudiants ont co-développé 8 projets autour de la santé et l'éducation. 3 projets retenus pour accompagnement.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="ainnovathon.jpg" alt="AInnovathon">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">AInnovathon Bootcamp</h4>
+        <p class="text-sm"><strong>Date :</strong> Avril 2025<br>
+           <strong>Partenaires :</strong> EBS, EIDIA<br>
+           <strong>Infos :</strong> +50 étudiants ont co-développé 8 projets autour de la santé et l'éducation. 3 projets retenus pour accompagnement.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="startech-bootcamp1.jpg" alt="Startech Bootcamp 1">
-      <h4>STARTECH Bootcamp 1</h4>
-      <p><strong>Date :</strong> Avril 2025<br>
-         <strong>Partenaire :</strong> Tamwilcom<br>
-         <strong>Infos :</strong> Bootcamp d’idéation pour accompagner les porteurs de projets vers leur premier POC.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="startech-bootcamp1.jpg" alt="Startech Bootcamp 1">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">STARTECH Bootcamp 1</h4>
+        <p class="text-sm"><strong>Date :</strong> Avril 2025<br>
+           <strong>Partenaire :</strong> Tamwilcom<br>
+           <strong>Infos :</strong> Bootcamp d’idéation pour accompagner les porteurs de projets vers leur premier POC.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="gitex2025.jpeg" alt="GITEX Africa">
-      <h4>Participation à GITEX Africa</h4>
-      <p><strong>Date :</strong> Avril 2025<br>
-         <strong>Partenaire :</strong> Tamwilcom<br>
-         <strong>Infos :</strong> EIC exposant labellisé à GITEX Africa, mettant en avant son soutien aux startups régionales.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="gitex2025.jpeg" alt="GITEX Africa">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Participation à GITEX Africa</h4>
+        <p class="text-sm"><strong>Date :</strong> Avril 2025<br>
+           <strong>Partenaire :</strong> Tamwilcom<br>
+           <strong>Infos :</strong> EIC exposant labellisé à GITEX Africa, mettant en avant son soutien aux startups régionales.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="startup-launch.jpeg" alt="Euromed Startup Launch">
-      <h4>Euromed Startup Launch</h4>
-      <p><strong>Date :</strong> Mars 2025<br>
-         <strong>Partenaire :</strong> Interne<br>
-         <strong>Infos :</strong> Programme nocturne de 4 semaines pour développer des idées entrepreneuriales pendant Ramadan.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="startup-launch.jpeg" alt="Euromed Startup Launch">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Euromed Startup Launch</h4>
+        <p class="text-sm"><strong>Date :</strong> Mars 2025<br>
+           <strong>Partenaire :</strong> Interne<br>
+           <strong>Infos :</strong> Programme nocturne de 4 semaines pour développer des idées entrepreneuriales pendant Ramadan.</p>
+      </div>
     </div>
 
-    <div class="event">
-  <img src="medhackathon.jpg" alt="Mediterranean Water Hackathon">
-  <h4>Mediterranean Water Hackathon Ufm</h4>
-  <p><strong>Date :</strong> Février 2025</p>
-  <p><strong>Partenaires :</strong> UfM, GIZ, Anna Lindh Foundation, IEMed</p>
-  <p><strong>Description :</strong> 70 jeunes de 21 nationalités se sont réunis à l'UEMF pour co-créer des solutions autour des compétences vertes, de la mobilité des jeunes et de l'engagement civique dans le cadre du Medideterranean Water Hackathon 2024.</p>
-</div>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="medhackathon.jpg" alt="Mediterranean Water Hackathon">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Mediterranean Water Hackathon Ufm</h4>
+        <p class="text-sm"><strong>Date :</strong> Février 2025</p>
+        <p class="text-sm"><strong>Partenaires :</strong> UfM, GIZ, Anna Lindh Foundation, IEMed</p>
+        <p class="text-sm"><strong>Description :</strong> 70 jeunes de 21 nationalités se sont réunis à l'UEMF pour co-créer des solutions autour des compétences vertes, de la mobilité des jeunes et de l'engagement civique dans le cadre du Medideterranean Water Hackathon 2024.</p>
+      </div>
+    </div>
 
   
-    <div class="event">
-      <img src="linkup-tot.jpg" alt="Formation Link Up Africa">
-      <h4>Formation "Training of Trainers" – Link Up Africa</h4>
-      <p><strong>Date :</strong> Février 2025<br>
-         <strong>Partenaires :</strong> Enabel, AMCI<br>
-         <strong>Infos :</strong> Formation sur la conception et mise en œuvre de programmes d’incubation efficaces.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="linkup-tot.jpg" alt="Formation Link Up Africa">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Formation "Training of Trainers" – Link Up Africa</h4>
+        <p class="text-sm"><strong>Date :</strong> Février 2025<br>
+           <strong>Partenaires :</strong> Enabel, AMCI<br>
+           <strong>Infos :</strong> Formation sur la conception et mise en œuvre de programmes d’incubation efficaces.</p>
+      </div>
     </div>
 
-    <div class="event">
-  <img src="tech4f_bootcamp3.jpg" alt="Tech4Farmers Bootcamp 3">
-  <h4>Tech4Farmers – Bootcamp 3</h4>
-  <p><strong>Date :</strong> Décembre 2024</p>
-  <p><strong>Partenariat :</strong> PRIE – AFD</p>
-  <p><strong>Description :</strong> Lancement du 3e bootcamp pour la 1re cohorte du programme Tech4Farmers. Ce bootcamp a réuni des entrepreneurs AgriTech pour accélérer leurs projets via des ateliers pratiques et l'accompagnement d'experts.</p>
-</div>
-
-     <div class="event">
-      <img src="StudentInnovUp2024.png" alt="Student InnovUp 2eme Edition">
-      <h4>Hackathon Students’ Innov’UP : Innover face au stress hydrique – Link Up Africa</h4>
-      <p><strong>Date :</strong> Decembre 2024<br>
-         <strong>Partenaires :</strong> Enabel, AMCI<br>
-         <strong>Infos :</strong> Formation sur la conception et mise en œuvre de programmes d’incubation efficaces.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="tech4f_bootcamp3.jpg" alt="Tech4Farmers Bootcamp 3">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Tech4Farmers – Bootcamp 3</h4>
+        <p class="text-sm"><strong>Date :</strong> Décembre 2024</p>
+        <p class="text-sm"><strong>Partenariat :</strong> PRIE – AFD</p>
+        <p class="text-sm"><strong>Description :</strong> Lancement du 3e bootcamp pour la 1re cohorte du programme Tech4Farmers. Ce bootcamp a réuni des entrepreneurs AgriTech pour accélérer leurs projets via des ateliers pratiques et l'accompagnement d'experts.</p>
+      </div>
     </div>
 
-<div class="event">
-      <img src="med-youth-lab.jpg" alt="Med Youth Lab">
-      <h4>Med Youth Lab 2024</h4>
-      <p><strong>Date :</strong> Novembre 2024<br>
-         <strong>Partenaires :</strong> UfM, GIZ, IEMed, Anna Lindh Foundation<br>
-         <strong>Infos :</strong> 70 jeunes de 21 nationalités ont co-créé des solutions pour les green skills, la mobilité et l'engagement civique.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="StudentInnovUp2024.png" alt="Student InnovUp 2eme Edition">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Hackathon Students’ Innov’UP : Innover face au stress hydrique – Link Up Africa</h4>
+        <p class="text-sm"><strong>Date :</strong> Decembre 2024<br>
+           <strong>Partenaires :</strong> Enabel, AMCI<br>
+           <strong>Infos :</strong> Formation sur la conception et mise en œuvre de programmes d’incubation efficaces.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="eib-ufm.jpeg" alt="EU Project Financing Training">
-      <h4>EU Project Financing Training</h4>
-      <p><strong>Date :</strong> Novembre 2024<br>
-         <strong>Partenaires :</strong> UfM, EIB<br>
-         <strong>Infos :</strong> Session de formation sur le financement européen à destination des étudiants de l’EBS.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="med-youth-lab.jpg" alt="Med Youth Lab">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Med Youth Lab 2024</h4>
+        <p class="text-sm"><strong>Date :</strong> Novembre 2024<br>
+           <strong>Partenaires :</strong> UfM, GIZ, IEMed, Anna Lindh Foundation<br>
+           <strong>Infos :</strong> 70 jeunes de 21 nationalités ont co-créé des solutions pour les green skills, la mobilité et l'engagement civique.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="design-thinking.jpeg" alt="Design Thinking">
-      <h4>Atelier Design Thinking – Innovation Management</h4>
-      <p><strong>Date :</strong> Novembre 2024<br>
-         <strong>Partenaire :</strong> Euromed Business School<br>
-         <strong>Infos :</strong> Atelier interactif sur l’empathie et le design thinking pour 100 étudiants.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="eib-ufm.jpeg" alt="EU Project Financing Training">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">EU Project Financing Training</h4>
+        <p class="text-sm"><strong>Date :</strong> Novembre 2024<br>
+           <strong>Partenaires :</strong> UfM, EIB<br>
+           <strong>Infos :</strong> Session de formation sur le financement européen à destination des étudiants de l’EBS.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="azur-invest.jpeg" alt="Partenariat Azur Fund">
-      <h4>Partenariat avec Azur Investment Fund</h4>
-      <p><strong>Date :</strong> Novembre 2024<br>
-         <strong>Partenaire :</strong> Azur Investment<br>
-         <strong>Infos :</strong> Signature d’un partenariat stratégique pour soutenir les startups early-stage.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="design-thinking.jpeg" alt="Design Thinking">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Atelier Design Thinking – Innovation Management</h4>
+        <p class="text-sm"><strong>Date :</strong> Novembre 2024<br>
+           <strong>Partenaire :</strong> Euromed Business School<br>
+           <strong>Infos :</strong> Atelier interactif sur l’empathie et le design thinking pour 100 étudiants.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="domseeds.jpg" alt="Lancement DOMSEEDS">
-      <h4>Lancement DOMSEEDS</h4>
-      <p><strong>Date :</strong> Novembre 2024<br>
-         <strong>Partenaire :</strong> Les Domaines Agricoles<br>
-         <strong>Infos :</strong> Lancement de la division innovation/startups. Participation de l’EIC à une table ronde sur l'AgriTech.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="azur-invest.jpeg" alt="Partenariat Azur Fund">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Partenariat avec Azur Investment Fund</h4>
+        <p class="text-sm"><strong>Date :</strong> Novembre 2024<br>
+           <strong>Partenaire :</strong> Azur Investment<br>
+           <strong>Infos :</strong> Signature d’un partenariat stratégique pour soutenir les startups early-stage.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="tech4farmers2.png" alt="Tech4Farmers Bootcamp 2">
-      <h4>Tech4Farmers Bootcamp 2</h4>
-      <p><strong>Date :</strong> Septembre 2024<br>
-         <strong>Partenaires :</strong> PRIE, AFD<br>
-         <strong>Infos :</strong> Focus sur les business models des 15 projets. Masterclass, coaching et échanges entre pairs.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="domseeds.jpg" alt="Lancement DOMSEEDS">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Lancement DOMSEEDS</h4>
+        <p class="text-sm"><strong>Date :</strong> Novembre 2024<br>
+           <strong>Partenaire :</strong> Les Domaines Agricoles<br>
+           <strong>Infos :</strong> Lancement de la division innovation/startups. Participation de l’EIC à une table ronde sur l'AgriTech.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="startech-launch.png" alt="Lancement STARTECH">
-      <h4>Lancement STARTECH – Bootcamps d’idéation</h4>
-      <p><strong>Date :</strong> Septembre 2024<br>
-         <strong>Partenaire :</strong> Tamwilcom<br>
-         <strong>Infos :</strong> Démarrage des bootcamps pour accompagner les porteurs de projets vers la structuration de leur POC.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="tech4farmers2.png" alt="Tech4Farmers Bootcamp 2">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Tech4Farmers Bootcamp 2</h4>
+        <p class="text-sm"><strong>Date :</strong> Septembre 2024<br>
+           <strong>Partenaires :</strong> PRIE, AFD<br>
+           <strong>Infos :</strong> Focus sur les business models des 15 projets. Masterclass, coaching et échanges entre pairs.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <img src="LinkUpAfrica_Selection.jpg" alt="Link Up Africa – Comité de sélection">
-      <h4>Link Up Africa – Comité de sélection</h4>
-      <p><strong>Date :</strong> Juillet 2024<br>
-         <strong>Partenaires :</strong> Enabel, AMCI<br>
-         <strong>Infos :</strong> Sélection des projets prometteurs pour accompagner des jeunes entrepreneurs souhaitant créer au Maroc ou en Afrique subsaharienne.</p>
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="startech-launch.png" alt="Lancement STARTECH">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Lancement STARTECH – Bootcamps d’idéation</h4>
+        <p class="text-sm"><strong>Date :</strong> Septembre 2024<br>
+           <strong>Partenaire :</strong> Tamwilcom<br>
+           <strong>Infos :</strong> Démarrage des bootcamps pour accompagner les porteurs de projets vers la structuration de leur POC.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-lg overflow-hidden shadow">
+      <img class="w-full h-48 object-cover" src="LinkUpAfrica_Selection.jpg" alt="Link Up Africa – Comité de sélection">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold text-blue-900 mb-2">Link Up Africa – Comité de sélection</h4>
+        <p class="text-sm"><strong>Date :</strong> Juillet 2024<br>
+           <strong>Partenaires :</strong> Enabel, AMCI<br>
+           <strong>Infos :</strong> Sélection des projets prometteurs pour accompagner des jeunes entrepreneurs souhaitant créer au Maroc ou en Afrique subsaharienne.</p>
+      </div>
     </div>
 
   </div>
 </section>
 
 
-<section id="contact">
-  <h2>Rejoignez notre écosystème</h2>
-  <div class="cta">
-    <p>Prêts à innover et à entreprendre avec nous ?<br>Rejoignez notre écosystème dynamique pour transformer vos idées en réalité.</p>
-    <a href="mailto:eic@ueuromed.org">Nous contacter</a>
+<section id="contact" class="py-16 px-4">
+  <h2 class="text-3xl font-semibold text-center mb-6">Rejoignez notre écosystème</h2>
+  <div class="bg-blue-50 p-8 rounded-lg shadow max-w-xl mx-auto text-center">
+    <p class="mb-6 text-lg">Prêts à innover et à entreprendre avec nous ?<br>Rejoignez notre écosystème dynamique pour transformer vos idées en réalité.</p>
+    <form aria-label="Formulaire de contact" action="mailto:eic@ueuromed.org" method="post" enctype="text/plain" class="space-y-4">
+      <label class="block">
+        <span class="sr-only">Nom</span>
+        <input class="w-full border-gray-300 rounded p-2" type="text" name="name" placeholder="Nom" required>
+      </label>
+      <label class="block">
+        <span class="sr-only">Email</span>
+        <input class="w-full border-gray-300 rounded p-2" type="email" name="email" placeholder="Email" required>
+      </label>
+      <label class="block">
+        <span class="sr-only">Message</span>
+        <textarea class="w-full border-gray-300 rounded p-2" name="message" placeholder="Votre message" required></textarea>
+      </label>
+      <button class="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors" type="submit">Envoyer</button>
+    </form>
   </div>
 </section>
 
-<footer>
+<footer class="bg-blue-900 text-white text-center py-6 text-sm">
   <p>© 2025 Euromed Innovation Center – Tous droits réservés</p>
 </footer>
+<div class="back-to-top fixed bottom-5 right-5 bg-blue-900 text-white py-2 px-3 rounded cursor-pointer hidden" aria-label="Haut de page">↑</div>
 
+<script>
+const topBtn=document.querySelector('.back-to-top');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>300){topBtn.classList.remove('hidden');}
+  else{topBtn.classList.add('hidden');}
+});
+topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
 </body>
 </html>
